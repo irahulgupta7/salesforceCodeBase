@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Inventory_Level_Low</fullName>
+        <categories>constants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inventory Level Low</shortDescription>
+        <value>Has a low inventory</value>
+    </labels>
+    <labels>
+        <fullName>Logger_Permitted_Emails</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Logger_Permitted_Emails</shortDescription>
+        <value>MR.DUMMY.MAIL@DELETEME.com</value>
+    </labels>
+    <labels>
+        <fullName>Select_One</fullName>
+        <categories>constants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select One</shortDescription>
+        <value>Select one</value>
+    </labels>
+    <labels>
+        <fullName>Test</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Test</shortDescription>
+        <value>Custom: Sales Profile;Custom: Marketing Profile</value>
+    </labels>
+    <labels>
+        <fullName>TestLabel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TestLabel</shortDescription>
+        <value>Hello New Notification</value>
+    </labels>
+</CustomLabels>

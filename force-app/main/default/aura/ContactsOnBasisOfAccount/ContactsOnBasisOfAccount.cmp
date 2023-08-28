@@ -1,0 +1,60 @@
+<aura:component controller="ContactBasisOnAcct" implements="force:appHostable,force:lightningQuickAction" >
+    <!-- Aura Handler -->
+    <aura:handler name="init"
+                  value ="this" 
+                  action ="{!c.doInit}"
+                  />
+    <aura:attribute name="accounts" 
+                    type="account[]"/>
+    <aura:attribute name="Contacts" 
+                    type="Contact[]"/>
+    <aura:attribute name="SelectedContacts" 
+                    type="Contact[]"/>
+    
+    <aura:attribute name="SelectedAccount" 
+                    type="String"/>
+    <aura:attribute name="IsTest" 
+                    type="Boolean"
+                    default ="true"/>
+    <div>
+        
+        <lightning:select label="Choose Account" name="acc" aura:id="acc" onchange="{! c.onChange }" > 
+            <aura:iteration items="{!v.accounts}" var="account">
+                <option value="{!account.Id}">{!account.Name}</option>
+            </aura:iteration>
+        </lightning:select>
+    </div>
+              <button class="slds-button slds-button--brand" onclick="{!c.showDateandTime}">Data</button>
+    			<p id="demo"></p>
+
+    <br/>
+    <div class="slds-m-around--x-small">
+        
+        <div class="slds-grid slds-grid--align-end slds-m-around--x-small">
+          <button class="slds-button slds-button--brand" onclick="{!c.addSelected}">Show Selected Records</button>
+        </div>
+        
+        <table class="slds-table slds-table--bordered slds-table--striped slds-table--cell-buffer slds-table--fixed-layout">
+        <thead>
+            <tr class="slds-text-heading--label">
+               <th scope="col"><div class="slds-truncate" title="Select">Select</div></th>
+               <th scope="col"><div class="slds-truncate" title="Account Name">Account Name</div></th>
+               <th scope="col"><div class="slds-truncate" title="Account ID">Account ID</div></th>
+               <th scope="col"><div class="slds-truncate" title="Email">Email</div></th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.Contacts}" var ="x">
+                <tr>
+                    <td><ui:inputCheckbox aura:id="checkBox" text="{!x.Id}" /></td>
+                    <th scope="row"><div class="slds-truncate" title="{!x.Name}">{!x.Name}</div></th>
+                    <td><div class="slds-truncate" title="{!x.AccountId}">{!x.AccountId}</div></td>
+                    <td><div class="slds-truncate" title="{!x.Email}">{!x.Email}</div></td>
+                </tr>
+            </aura:iteration>                            
+        </tbody>
+    </table>
+    </div>
+    <div> Selected Contact : {!v.SelectedContacts}</div>
+</aura:component>
