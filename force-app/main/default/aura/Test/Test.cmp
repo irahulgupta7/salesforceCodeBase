@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<ui:inputNumber label="Enter the number" aura:id="num1"/>  
+
+      <br/> 
+
+    <ui:button label="Click here" press="{!c.clickhere}"/> 
+</aura:component>
